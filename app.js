@@ -7,7 +7,10 @@ fetch(url)
 .then(res => res.json()) //devuelve promesa 
 .then(data => { //iterando el array
     data.forEach(user => {
-        console.log(user.name)
+        /*console.log(user.name)*/ //tomando propiedad
+        const p = document.createElement('p')
+        p.innerHTML = user.name
+        app.appendChild(p)
     });
     //console.log(data)
     })
